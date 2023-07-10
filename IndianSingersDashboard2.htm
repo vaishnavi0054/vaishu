@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Indian Singers Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #search {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #results {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .singer-card {
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+
+        .singer-name {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .instagram-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .singer-details {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Indian Singers Dashboard</h1>
+
+    <div id="search">
+        <input type="text" id="search-input" placeholder="Search for a singer">
+        <button onclick="search()">Search</button>
+    </div>
+
+    <div id="results">
+        <div class="singer-card">
+            <div class="singer-name">Arijit Singh</div>
+            <div class="singer-details">
+                <p>Profession: Playback Singer</p>
+                <p>Notable Songs: Tum Hi Ho, Channa Mereya, Ae Dil Hai Mushkil</p>
+            </div>
+            <div class="instagram-link">
+                <a href="https://www.instagram.com/arijitsingh" target="_blank">Instagram</a>
+            </div>
+        </div>
+        <div class="singer-card">
+            <div class="singer-name">Shreya Ghoshal</div>
+            <div class="singer-details">
+                <p>Profession: Playback Singer</p>
+                <p>Notable Songs: Teri Meri, Deewani Mastani, Agar Tum Mil Jao</p>
+            </div>
+            <div class="instagram-link">
+                <a href="https://www.instagram.com/shreyaghoshal" target="_blank">Instagram</a>
+            </div>
+        </div>
+        <div class="singer-card">
+            <div class="singer-name">Sonu Nigam</div>
+            <div class="singer-details">
+                <p>Profession: Playback Singer</p>
+                <p>Notable Songs: Kal Ho Naa Ho, Abhi Mujh Mein Kahin, Deewana Tera</p>
+            </div>
+            <div class="instagram-link">
+                <a href="https://www.instagram.com/sonunigamofficial" target="_blank">Instagram</a>
+            </div>
+        </div>
+        <div class="singer-card">
+            <div class="singer-name">Lata Mangeshkar</div>
+            <div class="singer-details">
+                <p>Profession: Playback Singer</p>
+                <p>Notable Songs: Lag Ja Gale, Pyar Kiya To Darna Kya, Tere Bina Zindagi Se</p>
+            </div>
+            <div class="instagram-link">
+                <a href="https://www.instagram.com/lata_mangeshkar" target="_blank">Instagram</a>
+            </div>
+        </div>
+        <div class="singer-card">
+            <div class="singer-name">Rahat Fateh Ali Khan</div>
+            <div class="singer-details">
+                <p>Profession: Playback Singer</p>
+                <p>Notable Songs: O Re Piya, Jiya Dhadak Dhadak Jaye, Tere Mast Mast Do Nain</p>
+            </div>
+            <div class="instagram-link">
+                <a href="https://www.instagram.com/officialrfakworld" target="_blank">Instagram</a>
+            </div>
+        </div>
+        <div class="singer-card">
+            <div class="singer-name">Sunidhi Chauhan</div>
+            <div class="singer-details">
+                <p>Profession: Playback Singer</p>
+                <p>Notable Songs: Sheila Ki Jawani, Kamli, Beedi</p>
+            </div>
+            <div class="instagram-link">
+                <a href="https://www.instagram.com/sunidhichauhan5" target="_blank">Instagram</a>
+            </div>
+        </div>
+        <div class="singer-card">
+            <div class="singer-name">Asha Bhosle</div>
+            <div class="singer-details">
+                <p>Profession: Playback Singer</p>
+                <p>Notable Songs: Dum Maro Dum, Piya Tu Ab To Aaja, Chura Liya Hai Tumne Jo Dil Ko</p>
+            </div>
+            <div class="instagram-link">
+                <a href="https://www.instagram.com/asha.bhosle" target="_blank">Instagram</a>
+            </div>
+        </div>
+        <div class="singer-card">
+            <div class="singer-name">Shaan</div>
+            <div class="singer-details">
+                <p>Profession: Playback Singer</p>
+                <p>Notable Songs: Jab Se Tere Naina, Chand Sifarish, Behti Hawa Sa Tha Woh</p>
+            </div>
+            <div class="instagram-link">
+                <a href="https://www.instagram.com/singer_shaan" target="_blank">Instagram</a>
+            </div>
+        </div>
+        <div class="singer-card">
+            <div class="singer-name">Atif Aslam</div>
+            <div class="singer-details">
+                <p>Profession: Playback Singer</p>
+                <p>Notable Songs: Tere Bin, Pehli Dafa, Aadat</p>
+            </div>
+            <div class="instagram-link">
+                <a href="https://www.instagram.com/atifaslam" target="_blank">Instagram</a>
+            </div>
+        </div>
+        <div class="singer-card">
+            <div class="singer-name">Neha Kakkar</div>
+            <div class="singer-details">
+                <p>Profession: Playback Singer</p>
+                <p>Notable Songs: Dilbar, O Saki Saki, Kala Chashma</p>
+            </div>
+            <div class="instagram-link">
+                <a href="https://www.instagram.com/nehakakkar" target="_blank">Instagram</a>
+            </div>
+        </div>
+        <div class="singer-card">
+            <div class="singer-name">Kishore Kumar</div>
+            <div class="singer-details">
+                <p>Profession: Playback Singer</p>
+                <p>Notable Songs: Roop Tera Mastana, Ek Ladki Bheegi Bhaagi Si, Yeh Shaam Mastani</p>
+            </div>
+            <div class="instagram-link">
+                <a href="https://www.instagram.com/kishore_kumar_" target="_blank">Instagram</a>
+            </div>
+        </div>
+        <div class="singer-card">
+            <div class="singer-name">Mohammed Rafi</div>
+            <div class="singer-details">
+                <p>Profession: Playback Singer</p>
+                <p>Notable Songs: Teri Bindiya Re, Chaudhvin Ka Chand Ho, Baharon Phool Barsao</p>
+            </div>
+            <div class="instagram-link">
+                <a href="https://www.instagram.com/mohammedrafi" target="_blank">Instagram</a>
+            </div>
+        </div>
+        <div class="singer-card">
+            <div class="singer-name">Udit Narayan</div>
+            <div class="singer-details">
+                <p>Profession: Playback Singer</p>
+                <p>Notable Songs: Pehla Nasha, Mitwa, Kuch Kuch Hota Hai</p>
+            </div>
+            <div class="instagram-link">
+                <a href="https://www.instagram.com/uditnarayanmusic" target="_blank">Instagram</a>
+            </div>
+        </div>
+        <div class="singer-card">
+            <div class="singer-name">Kumar Sanu</div>
+            <div class="singer-details">
+                <p>Profession: Playback Singer</p>
+                <p>Notable Songs: Tum Dil Ki Dhadkan Mein, Ek Ladki Ko Dekha Toh Aisa Laga, Do Dil Mil Rahe Hai</p>
+            </div>
+            <div class="instagram-link">
+                <a href="https://www.instagram.com/kumarsanuofficial" target="_blank">Instagram</a>
+            </div>
+        </div>
+        <div class="singer-card">
+            <div class="singer-name">Alka Yagnik</div>
+            <div class="singer-details">
+                <p>Profession: Playback Singer</p>
+                <p>Notable Songs: Dilbar Dilbar, Tumse Milna, Kuch Kuch Hota Hai</p>
+            </div>
+            <div class="instagram-link">
+                <a href="https://www.instagram.com/therealalkayagnik" target="_blank">Instagram</a>
+            </div>
+        </div>
+        <div class="singer-card">
+            <div class="singer-name">Javed Ali</div>
+            <div class="singer-details">
+                <p>Profession: Playback Singer</p>
+                <p>Notable Songs: Kun Faya Kun, Guzarish, Jashn-e-Bahaara</p>
+            </div>
+            <div class="instagram-link">
+                <a href="https://www.instagram.com/javedali4u" target="_blank">Instagram</a>
+            </div>
+        </div>
+        <div class="singer-card">
+            <div class="singer-name">Amit Trivedi</div>
+            <div class="singer-details">
+                <p>Profession: Music Director, Playback Singer</p>
+                <p>Notable Songs: Namo Namo, Iktara, Emotional Atyachar</p>
+            </div>
+            <div class="instagram-link">
+                <a href="https://www.instagram.com/amittrivedi" target="_blank">Instagram</a>
+            </div>
+        </div>
+        <div class="singer-card">
+            <div class="singer-name">Badshah</div>
+            <div class="singer-details">
+                <p>Profession: Rapper, Singer</p>
+                <p>Notable Songs: DJ Waley Babu, Kar Gayi Chull, Paagal</p>
+            </div>
+            <div class="instagram-link">
+                <a href="https://www.instagram.com/badboyshah" target="_blank">Instagram</a>
+            </div>
+        </div>
+        <div class="singer-card">
+            <div class="singer-name">Jasbir Jassi</div>
+            <div class="singer-details">
+                <p>Profession: Punjabi Singer</p>
+                <p>Notable Songs: Dil Le Gayi Kudi Gujarat Di, Kudi Kudi</p>
+            </div>
+            <div class="instagram-link">
+                <a href="https://www.instagram.com/jasbirjassi" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function search() {
+            var input = document.getElementById('search-input').value.toLowerCase();
+            var singers = document.getElementsByClassName('singer-card');
+
+            for (var i = 0; i < singers.length; i++) {
+                var singerName = singers[i].getElementsByClassName('singer-name')[0].textContent.toLowerCase();
+
+                if (singerName.includes(input)) {
+                    singers[i].style.display = 'block';
+                } else {
+                    singers[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
